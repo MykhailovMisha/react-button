@@ -137,7 +137,6 @@ const calculation = method => {
         setWeekMes(ww);
     }
 }
-debugger
   return (
       
           <div id="trim">
@@ -164,7 +163,7 @@ debugger
             </div>
             <div onClick={() => hideCalc(false)} className="fon_for_calc">
             </div>
-            <div onClick={() => hideCalc(false)} className="fon_for_menu">
+            <div onClick={() => hideMenu(false)} className="fon_for_menu">
             </div>
 
             <div className="calc">
@@ -306,8 +305,8 @@ debugger
                     <div className="menu_title">Меню для беременных</div>  
                     <div className="menu_items">    
                     <div className="menu_item"><NavLink to="/Image1">Примерное меню на 1-ий триместр беременности</NavLink></div>
-                    <div className="menu_item"><a href="/Image2">Примерное меню на 2-ий триместр беременности</a></div>
-                    <div className="menu_item"><a href="/Image3">Примерное меню на 3-ий триместр беременности</a></div>
+                    <div className="menu_item"><NavLink to="/Image2">Примерное меню на 2-ий триместр беременности</NavLink></div>
+                    <div className="menu_item"><NavLink to="/Image3">Примерное меню на 3-ий триместр беременности</NavLink></div>
                     </div>
                 <div id="loading">
                 <img src={loader} alt="Загрузка"></img>

@@ -3,8 +3,8 @@ import image from './images/Menu1.png'
 
 const Image_1 = () => {
     return (
-        <div>
-            <img src={image} alt="image" />
+        <div className='image_style'>
+            <img src={image} alt="image" width="95%" />
         </div>
     )
 }

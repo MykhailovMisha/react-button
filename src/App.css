@@ -421,6 +421,11 @@ html {
   display: flex;
 
 }
+.image_style{
+  display: flex;
+  justify-content: center;
+
+}
 .button_calculation{
   margin-top: 1.5rem;
   min-width: 10rem;
