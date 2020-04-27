@@ -2,6 +2,7 @@
   "name": "infositeber",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://MykhailovMisha.github.io/react-button",
   "dependencies": {
     "@babel/core": "7.8.4",
     "@svgr/webpack": "4.3.3",
@@ -66,7 +67,9 @@
     "webpack": "4.41.5",
     "webpack-dev-server": "3.10.2",
     "webpack-manifest-plugin": "2.2.0",
-    "workbox-webpack-plugin": "4.3.1"
+    "workbox-webpack-plugin": "4.3.1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "scripts": {
     "start": "node scripts/start.js",
