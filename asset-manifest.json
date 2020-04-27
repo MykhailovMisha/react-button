@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-button/static/css/main.640e56c7.chunk.css",
+    "main.js": "/react-button/static/js/main.558cc738.chunk.js",
+    "main.js.map": "/react-button/static/js/main.558cc738.chunk.js.map",
+    "runtime-main.js": "/react-button/static/js/runtime-main.b9a729e7.js",
+    "runtime-main.js.map": "/react-button/static/js/runtime-main.b9a729e7.js.map",
+    "static/js/2.ffcb224c.chunk.js": "/react-button/static/js/2.ffcb224c.chunk.js",
+    "static/js/2.ffcb224c.chunk.js.map": "/react-button/static/js/2.ffcb224c.chunk.js.map",
+    "index.html": "/react-button/index.html",
+    "precache-manifest.eecb7a1b4d305fce5bc77b9351005915.js": "/react-button/precache-manifest.eecb7a1b4d305fce5bc77b9351005915.js",
+    "service-worker.js": "/react-button/service-worker.js",
+    "static/css/main.640e56c7.chunk.css.map": "/react-button/static/css/main.640e56c7.chunk.css.map",
+    "static/js/2.ffcb224c.chunk.js.LICENSE.txt": "/react-button/static/js/2.ffcb224c.chunk.js.LICENSE.txt",
+    "static/media/loader.svg": "/react-button/static/media/loader.1591d839.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b9a729e7.js",
+    "static/js/2.ffcb224c.chunk.js",
+    "static/css/main.640e56c7.chunk.css",
+    "static/js/main.558cc738.chunk.js"
+  ]
+}
