@@ -9,9 +9,8 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import Image_1 from './img_link/image_1';
 import Image_2 from './img_link/image_2';
 import Image_3 from './img_link/image_3';
-import All from './all';
 
-const App = () => {
+const All = () => {
   const { isLatestVersion, emptyCacheStorage } = useClearCache();
   const [trimestrState, setTrimestr] = useState(0);
   const [weekState, setWeek] = useState(0);
@@ -67,13 +66,18 @@ const App = () => {
     emptyCacheStorage();
   }
   return (
-    <BrowserRouter>
-        <Route exact path='/' component={All} />
-        <Route path='/Image1' component={Image_1} />
-        <Route path='/Image2' component={Image_2} />
-        <Route path='/Image3' component={Image_3} />
-    </BrowserRouter>
+ <>
+    {!isLatestVersion && (
+      <div className="App">
+        <div className="surface">
+          {openTrimestr ? <ChangeTrimestr toAboutWeek={toAboutWeek} change={TrimeestrChange} /> : <></>}
+          {openWeek ? <ChangeWeek change={WeekChange} trimestr={trimestrState} back={backWeek} /> : <></>}
+          {openAboutWeek ? <AboutWeek backToWeek={backToWeek} week={weekState} /> : <></>}
+        </div>
+      </div>
+      )}
+</>
   );
 }
 
-export default App;
+export default All;

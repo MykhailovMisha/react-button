@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import * as dateFns from 'date-fns';
 // import { ru } from 'date-fns/locale';
 import loader from './loader.svg';
+import {NavLink, Route } from 'react-router-dom';
+
 
 const ChangeTrimestr = (props) => {
 
@@ -39,7 +41,17 @@ const hideCalc = (open) => {
         doc[0].style.display = 'none';
         calc[0].style.display = 'none';
     }
-
+}
+const hideMenu = (open) => {
+    let docs = document.getElementsByClassName('fon_for_menu');
+    let menu = document.getElementsByClassName('menu');
+    if (open === true){
+        docs[0].style.display = 'block';
+        menu[0].style.display = 'block';
+    } else {
+        docs[0].style.display = 'none';
+        menu[0].style.display = 'none';
+    } 
 }
 const optionShow = (start, end) => {
     let arr = [];
@@ -125,7 +137,9 @@ const calculation = method => {
         setWeekMes(ww);
     }
 }
+debugger
   return (
+      
           <div id="trim">
             <div className="site_name">PregnancyHelper</div>
             <div className="title">Информационный сайт ведения беременности</div>
@@ -146,10 +160,13 @@ const calculation = method => {
             <div className="flex_footer" style={{ width: '100%' }}>
                 <div className="text_calc">Калькулятор расчета даты родов и срока беременности</div>
               <button onClick={() => hideCalc(true)} className="calc_button">Показать</button>
+              <button onClick={() => hideMenu(true)} className="menu_button">Меню для беременных</button>
             </div>
             <div onClick={() => hideCalc(false)} className="fon_for_calc">
-
             </div>
+            <div onClick={() => hideCalc(false)} className="fon_for_menu">
+            </div>
+
             <div className="calc">
                 <div id="edit_calc">
                     <div id="edit_calc__title">Рассчитать даты родов и сроки беременности</div>
@@ -283,7 +300,22 @@ const calculation = method => {
                 <img src={loader} alt="Загрузка"></img>
                 </div>
             </div>
+
+            <div className="menu">
+            
+                    <div className="menu_title">Меню для беременных</div>  
+                    <div className="menu_items">    
+                    <div className="menu_item"><NavLink to="/Image1">Примерное меню на 1-ий триместр беременности</NavLink></div>
+                    <div className="menu_item"><a href="/Image2">Примерное меню на 2-ий триместр беременности</a></div>
+                    <div className="menu_item"><a href="/Image3">Примерное меню на 3-ий триместр беременности</a></div>
+                    </div>
+                <div id="loading">
+                <img src={loader} alt="Загрузка"></img>
+                </div>
+            </div>
+            
           </div>
+          
           
   );
 }
